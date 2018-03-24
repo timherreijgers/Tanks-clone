@@ -1,6 +1,6 @@
-package tk.timtim3001.tanksclone.engine.window;
+package tk.timtim3001.engine.window;
 
-import tk.timtim3001.tanksclone.engine.renderer.SpriteRenderer;
+import tk.timtim3001.engine.renderer.SpriteRenderer;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;

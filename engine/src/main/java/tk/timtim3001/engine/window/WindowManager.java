@@ -1,4 +1,4 @@
-package tk.timtim3001.tanksclone.engine.window;
+package tk.timtim3001.engine.window;
 
 import javax.swing.UIManager;
 

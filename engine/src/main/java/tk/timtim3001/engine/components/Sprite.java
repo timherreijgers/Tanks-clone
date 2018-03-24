@@ -1,7 +1,7 @@
-package tk.timtim3001.tanksclone.engine.renderer;
+package tk.timtim3001.engine.components;
 
-import tk.timtim3001.tanksclone.engine.Component;
-import tk.timtim3001.tanksclone.engine.GameObject;
+import tk.timtim3001.engine.core.GameObject;
+import tk.timtim3001.engine.renderer.SpriteRenderer;
 
 import java.awt.image.BufferedImage;
 
@@ -18,8 +18,13 @@ public class Sprite extends Component {
     }
 
     @Override
-    public void start() {
+    public void resume() {
         SpriteRenderer.getInstance().addSpriteToRenderer(this);
+    }
+
+    @Override
+    public void pause() {
+        SpriteRenderer.getInstance().removeSpriteFromRenderer(this);
     }
 
     public int getLayer() {

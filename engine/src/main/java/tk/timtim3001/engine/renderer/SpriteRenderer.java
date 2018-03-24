@@ -1,8 +1,15 @@
-package tk.timtim3001.tanksclone.engine.renderer;
+package tk.timtim3001.engine.renderer;
 
-import java.awt.*;
-import java.util.*;
+import tk.timtim3001.engine.components.Sprite;
+
+
+import java.awt.Graphics2D;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class SpriteRenderer {
 
@@ -36,11 +43,15 @@ public class SpriteRenderer {
         this.layerOrder = integers;
     }
 
-    void addSpriteToRenderer(Sprite sprite){
+    public void addSpriteToRenderer(Sprite sprite){
         if(!doesMapContainKey(sprite.getLayer())){
             addKeyToMap(sprite.getLayer());
         }
         layerMap.get(sprite.getLayer()).add(sprite);
+    }
+
+    public void removeSpriteFromRenderer(Sprite sprite){
+        layerMap.get(sprite.getLayer()).remove(sprite);
     }
 
     public void drawSprites(Graphics2D graphics2D){
