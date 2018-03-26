@@ -70,7 +70,7 @@ public class Engine {
     public void sync(int fps){
         if(fps < 0)
             throw new RuntimeException("Fps should be greater then 0");
-        Time.setFps(fps);
+        Time.setTargetFps(fps);
     }
 
     GameWorld getActiveGameWorld(){
@@ -78,7 +78,7 @@ public class Engine {
     }
 
     int getTargetFps() {
-        return Time.getFps();
+        return Time.getTargetFps();
     }
 
     public double getFps(){

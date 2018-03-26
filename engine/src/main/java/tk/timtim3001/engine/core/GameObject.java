@@ -42,6 +42,15 @@ public class GameObject {
         return transform;
     }
 
+    @SuppressWarnings("unchecked")
+    public <T> T getComponent(Class<T> component){
+        for(Component c : components){
+            if(component.isInstance(c))
+                return (T) c;
+        }
+        return null;
+    }
+
     protected void start(){
         for(Component component : components){
             component.start();
