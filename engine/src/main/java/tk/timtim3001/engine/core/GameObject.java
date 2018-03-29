@@ -27,11 +27,20 @@ public class GameObject {
 
     public void addComponent(Component component){
         components.add(component);
+        component.setParent(this);
         component.start();
     }
 
     public void translate(int dx, int dy){
         position.setLocation(position.getX() + dx, position.getY() + dy);
+    }
+
+    public void setPosition(int x, int y){
+        setPosition(new Point2D.Double(x, y));
+    }
+
+    public void setPosition(Point2D position){
+        this.position = position;
     }
 
     public AffineTransform getTransform(){
@@ -66,8 +75,6 @@ public class GameObject {
         for(Component component : components){
             component.update();
         }
-
-        translate((int) Math.round(50 * Time.deltaTime), 0);
     }
 
     protected void pause(){

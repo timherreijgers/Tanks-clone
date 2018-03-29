@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class SpriteRenderer {
+public class SpriteRenderer extends Renderer{
 
     private Map<Integer, ArrayList<Sprite>> layerMap;
     private Integer[] layerOrder;
@@ -25,6 +25,7 @@ public class SpriteRenderer {
     }
 
     private SpriteRenderer(){
+        super();
         layerMap = new HashMap<>();
         layerOrder = new Integer[0];
     }
@@ -54,7 +55,8 @@ public class SpriteRenderer {
         layerMap.get(sprite.getLayer()).remove(sprite);
     }
 
-    public void drawSprites(Graphics2D graphics2D){
+    @Override
+    public void render(Graphics2D graphics2D){
         for(int i : layerOrder){
             List<Sprite> sprites = layerMap.get(i);
             for(Sprite sprite : sprites){

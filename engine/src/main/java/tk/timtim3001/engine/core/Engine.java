@@ -1,6 +1,7 @@
 package tk.timtim3001.engine.core;
 
 import tk.timtim3001.engine.exceptions.WorldNotInitializedException;
+import tk.timtim3001.engine.input.Input;
 import tk.timtim3001.engine.window.Window;
 import tk.timtim3001.engine.window.WindowDimension;
 import tk.timtim3001.engine.window.WindowManager;
@@ -26,8 +27,6 @@ public class Engine {
     }
 
     private Engine(){
-        System.setProperty("sun.java2d.opengl", "true");
-
         worldMap = new HashMap<>();
         windowManager = WindowManager.getInstance();
     }
@@ -36,6 +35,7 @@ public class Engine {
         windowManager.createWindow(WindowDimension.DIMENSION_720P, "Tanks");
         Window window = windowManager.getWindow();
         gameLoop = new GameLoop(window);
+        Input.getInstance();
 
         gameLoop.start();
     }

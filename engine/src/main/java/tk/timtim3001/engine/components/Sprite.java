@@ -9,12 +9,14 @@ public class Sprite extends Component {
 
     private int layer;
     private BufferedImage image;
-    private GameObject parent;
 
-    public Sprite(int layer, BufferedImage image, GameObject parent) {
+    public Sprite(int layer, BufferedImage image) {
         this.layer = layer;
         this.image = image;
-        this.parent = parent;
+    }
+
+    protected Sprite(int layer){
+        this.layer = layer;
     }
 
     @Override
@@ -33,9 +35,5 @@ public class Sprite extends Component {
 
     public BufferedImage getImage() {
         return image;
-    }
-
-    public GameObject getParent() {
-        return parent;
     }
 }
