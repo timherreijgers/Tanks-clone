@@ -18,7 +18,7 @@ public class UICanvas {
     private int y;
     private Color backgroundColor;
 
-    private Set<UIElement> elements;
+    private List<UIElement> elements;
 
     public UICanvas(int x, int y, int width, int height){
         this.x = x;
@@ -27,7 +27,7 @@ public class UICanvas {
         this.height = height;
         this.backgroundColor = new Color(0,0,0,0);
 
-        elements = new HashSet<>();
+        elements = new ArrayList<>();
     }
 
     public void addElement(UIElement element){

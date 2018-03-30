@@ -3,7 +3,6 @@ package tk.timtim3001.engine.ui;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.awt.event.MouseEvent;
 
 public class UIElement {
 
@@ -40,6 +39,10 @@ public class UIElement {
         onClickListener = listener;
     }
 
+    void setParent(UICanvas parent){
+        this.parent = parent;
+    }
+
     public UICanvas getParent(){
         return parent;
     }
@@ -50,8 +53,12 @@ public class UIElement {
                 onClickListener.onClick();
     }
 
-    void setParent(UICanvas parent){
-        this.parent = parent;
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public interface OnClickListener{

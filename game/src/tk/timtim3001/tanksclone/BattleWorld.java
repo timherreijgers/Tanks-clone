@@ -1,9 +1,9 @@
 package tk.timtim3001.tanksclone;
 
+import tk.timtim3001.engine.components.Sprite;
 import tk.timtim3001.engine.components.TerrainComponent;
 import tk.timtim3001.engine.core.Engine;
 import tk.timtim3001.engine.core.GameObject;
-import tk.timtim3001.engine.components.Sprite;
 import tk.timtim3001.engine.terrain.TerrainGenerator;
 import tk.timtim3001.engine.ui.Button;
 import tk.timtim3001.engine.ui.UICanvas;
@@ -16,17 +16,11 @@ import java.awt.Color;
 import java.io.IOException;
 import java.net.URL;
 
-public class Main {
+public class BattleWorld {
 
-    public static void main(String args[]){
-        new Main();
-    }
-
-    private Main(){
+    public BattleWorld() {
         try {
             Engine engine = Engine.getInstance();
-            engine.sync(60);
-            engine.setGameWorld("Main");
 
             GameObject mario = new GameObject();
             URL url = getClass().getResource("/images/mario.png");
@@ -41,15 +35,15 @@ public class Main {
             terrain.addComponent(terrainComponent);
             terrain.setPosition(-1, WindowManager.getInstance().getWindow().getHeight() - 100);
 
-            UICanvas uiCanvas = new UICanvas(0,100,500,500);
+            UICanvas uiCanvas = new UICanvas(0, 100, 500, 500);
             uiCanvas.setBackgroundColor(Color.CYAN);
-            uiCanvas.addElement(new TestUIElement(10,10,"Dit is een knop"));
-            uiCanvas.addElement(new UIElement(400,100,50, 200));
+            uiCanvas.addElement(new TestUIElement(10, 10, "Dit is een knop"));
+            uiCanvas.addElement(new UIElement(400, 100, 50, 200));
 
-            UICanvas mainUI = new UICanvas(0,0, 1280, 100);
+            UICanvas mainUI = new UICanvas(0, 0, 1280, 100);
             mainUI.setBackgroundColor(Color.RED);
             Button button = new Button(10, 10, "Open menu");
-            button.addOnClickListener(()->UIManager.displayCanvas("test"));
+            button.addOnClickListener(() -> UIManager.displayCanvas("test"));
             mainUI.addElement(button);
 
             engine.addGameObject(mario);
@@ -63,4 +57,5 @@ public class Main {
             e.printStackTrace();
         }
     }
+
 }

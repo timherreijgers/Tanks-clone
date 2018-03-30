@@ -38,7 +38,14 @@ public class Button extends UIElement {
 
     @Override
     protected void draw(Graphics2D g) {
+        Color oldColor = g.getColor();
+
+        g.setColor(new Color(190, 190, 190));
+        g.fill(new Rectangle2D.Double(x, y, width, height));
+        g.setColor(Color.BLACK);
         g.draw(new Rectangle2D.Double(x, y, width, height));
         g.drawString(text, x + 5, y + height - 4);
+
+        g.setColor(oldColor);
     }
 }
