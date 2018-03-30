@@ -21,6 +21,7 @@ public class BattleWorld {
     public BattleWorld() {
         try {
             Engine engine = Engine.getInstance();
+            engine.setGameWorld("BattleWorld");
 
             GameObject mario = new GameObject();
             URL url = getClass().getResource("/images/mario.png");
