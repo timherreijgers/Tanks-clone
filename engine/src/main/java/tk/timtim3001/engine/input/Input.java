@@ -1,13 +1,16 @@
 package tk.timtim3001.engine.input;
 
+import tk.timtim3001.engine.ui.UIManager;
 import tk.timtim3001.engine.window.WindowManager;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Input implements KeyListener {
+public class Input extends MouseAdapter implements KeyListener {
 
     private static Input instance;
 
@@ -22,6 +25,7 @@ public class Input implements KeyListener {
     private Input(){
         currentlyPressed = new HashSet<>();
         WindowManager.getInstance().getWindow().addKeyListener(this);
+        WindowManager.getInstance().getWindow().addMouseListener(this);
     }
 
     public boolean isKeyDown(int keycode){
@@ -41,5 +45,10 @@ public class Input implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
         currentlyPressed.remove(e.getKeyCode());
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        UIManager.onMouseClickEvent(e);
     }
 }

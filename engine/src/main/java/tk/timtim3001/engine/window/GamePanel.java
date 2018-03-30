@@ -20,5 +20,6 @@ public class GamePanel extends JPanel {
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         renderer.render((Graphics2D) graphics);
+        tk.timtim3001.engine.ui.UIManager.draw((Graphics2D) graphics);
     }
 }

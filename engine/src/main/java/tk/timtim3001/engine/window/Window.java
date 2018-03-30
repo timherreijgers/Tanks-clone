@@ -1,6 +1,7 @@
 package tk.timtim3001.engine.window;
 
 import javax.swing.*;
+import java.awt.Graphics2D;
 
 public class Window extends JFrame {
 
@@ -24,6 +25,10 @@ public class Window extends JFrame {
 
     public void updateWindow(){
         panel.repaint();
+    }
+
+    public Graphics2D getCorrectGraphics(){
+        return (Graphics2D) panel.getGraphics().create();
     }
 
 }
