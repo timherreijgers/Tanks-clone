@@ -16,6 +16,8 @@ public class Component {
 
     public void update(){}
 
+    public void fixedUpdate(){}
+
     public void pause(){}
 
     public void destroy(){}

@@ -1,20 +1,10 @@
 package tk.timtim3001.tanksclone;
 
-import tk.timtim3001.engine.components.TerrainComponent;
+import org.dyn4j.geometry.MassType;
+import tk.timtim3001.engine.components.BodyComponent;
 import tk.timtim3001.engine.core.Engine;
 import tk.timtim3001.engine.core.GameObject;
-import tk.timtim3001.engine.components.Sprite;
-import tk.timtim3001.engine.terrain.TerrainGenerator;
-import tk.timtim3001.engine.ui.Button;
-import tk.timtim3001.engine.ui.UICanvas;
-import tk.timtim3001.engine.ui.UIElement;
-import tk.timtim3001.engine.ui.UIManager;
-import tk.timtim3001.engine.window.WindowManager;
-
-import javax.imageio.ImageIO;
-import java.awt.Color;
-import java.io.IOException;
-import java.net.URL;
+import tk.timtim3001.engine.physics.colliders.BoxCollider;
 
 public class Main {
 
@@ -23,44 +13,21 @@ public class Main {
     }
 
     private Main(){
-        try {
-            Engine engine = Engine.getInstance();
-            engine.sync(60);
-            engine.setGameWorld("Main");
+        Engine engine = Engine.getInstance();
+        engine.sync(60);
+        engine.setGameWorld("Main");
 
-            GameObject mario = new GameObject();
-            URL url = getClass().getResource("/images/mario.png");
-            Sprite sprite = new Sprite(1, ImageIO.read(url));
-            mario.addComponent(sprite);
-            mario.addComponent(new DebugComponent());
-            mario.setPosition(400, 200);
+        GameObject floor = new GameObject();
+        floor.translate(0, 600);
+        BodyComponent component1 = new BodyComponent(new BoxCollider(1000, 10), MassType.INFINITE);
+        floor.addComponent(component1);
 
-            GameObject terrain = new GameObject();
-            TerrainComponent terrainComponent = new TerrainComponent(2,
-                    TerrainGenerator.generateTerrain(2000, 100));
-            terrain.addComponent(terrainComponent);
-            terrain.setPosition(-1, WindowManager.getInstance().getWindow().getHeight() - 100);
+        GameObject block = new GameObject();
+        block.translate(500, 0);
+        BodyComponent component2 = new BodyComponent(new BoxCollider(10, 10), MassType.NORMAL);
+        block.addComponent(component2);
 
-            UICanvas uiCanvas = new UICanvas(0,100,500,500);
-            uiCanvas.setBackgroundColor(Color.CYAN);
-            uiCanvas.addElement(new TestUIElement(10,10,"Dit is een knop"));
-            uiCanvas.addElement(new UIElement(400,100,50, 200));
-
-            UICanvas mainUI = new UICanvas(0,0, 1280, 100);
-            mainUI.setBackgroundColor(Color.RED);
-            Button button = new Button(10, 10, "Open menu");
-            button.addOnClickListener(()->UIManager.displayCanvas("test"));
-            mainUI.addElement(button);
-
-            engine.addGameObject(mario);
-            engine.addGameObject(terrain);
-
-            UIManager.registerCanvas("main", mainUI);
-            UIManager.registerCanvas("test", uiCanvas);
-
-            UIManager.displayCanvas("main");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        engine.addGameObject(floor);
+        engine.addGameObject(block);
     }
 }

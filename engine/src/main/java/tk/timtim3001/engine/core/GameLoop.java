@@ -1,5 +1,6 @@
 package tk.timtim3001.engine.core;
 
+import tk.timtim3001.engine.physics.PhysicsEngine;
 import tk.timtim3001.engine.window.Window;
 
 class GameLoop {
@@ -25,6 +26,10 @@ class GameLoop {
             }
         });
         thread.start();
+        PhysicsEngine.start(()->{
+            if (engine.getActiveGameWorld() != null)
+                engine.getActiveGameWorld().physicsUpdate();
+        });
     }
 
     private void sync(){

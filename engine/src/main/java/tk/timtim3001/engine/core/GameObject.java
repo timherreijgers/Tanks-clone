@@ -39,6 +39,10 @@ public class GameObject {
         setPosition(new Point2D.Double(x, y));
     }
 
+    public void setRotation(double rotation) {
+        this.rotation = rotation;
+    }
+
     public void setPosition(Point2D position){
         this.position = position;
     }
@@ -77,6 +81,12 @@ public class GameObject {
         }
     }
 
+    protected void fixedUpdate(){
+        for(Component component : components){
+            component.fixedUpdate();
+        }
+    }
+
     protected void pause(){
         for(Component component : components)
             component.pause();
@@ -86,4 +96,7 @@ public class GameObject {
 
     }
 
+    public double getRotation() {
+        return rotation;
+    }
 }
