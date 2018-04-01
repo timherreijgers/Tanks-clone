@@ -13,6 +13,8 @@ import java.util.Map;
 
 public class Engine {
 
+    public static final float PPM = 100.0f;
+
     private WindowManager windowManager;
     private GameLoop gameLoop;
     private Map<String, GameWorld> worldMap;

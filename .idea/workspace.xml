@@ -3,16 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4da93446-c92e-4050-953c-e341d4a4d3db" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/engine/engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/engine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/BodyComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/BodyComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Sprite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/BoxCollider.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/BoxCollider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/Collider.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/Collider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/DebugDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/DebugDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/ImageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/ImageElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/window/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/window/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/DebugComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/DebugComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tanks-clone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tanks-clone.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,12 +28,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Main.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state relative-caret-position="53">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1208#1209#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-315">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,44 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BodyComponent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/BodyComponent.java">
+      <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoxCollider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/BoxCollider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhysicsEngine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/PhysicsEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#1004#1005#0" expanded="true" />
-                <element signature="e#1042#1043#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="268">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -95,6 +78,7 @@
     <findStrings>
       <find>MainMenu</find>
       <find>&quot;MainMenu&quot;</find>
+      <find>System.out.println</find>
     </findStrings>
     <replaceStrings>
       <replace>UI_NAME</replace>
@@ -106,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/engine/components/Sprite.java" />
         <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/engine/core/GameLoop.java" />
         <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/engine/core/GameWorld.java" />
         <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/engine/core/Engine.java" />
@@ -116,11 +99,8 @@
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Time.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/input/Keybarod.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/input/Keyboard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/DebugComponent.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/terrain/TerrainGenerator.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Camera.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Renderer.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Sprite.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/SpriteRenderer.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/terrain/DestructableTerrain.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/terrain/Terrain.java" />
@@ -136,7 +116,6 @@
         <option value="$PROJECT_DIR$/Game.iml" />
         <option value="$PROJECT_DIR$/game/src/tk/timtim3001/tanksclone/Main.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/UIElement.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/ImageElement.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/Button.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/UICanvas.java" />
         <option value="$PROJECT_DIR$/game/src/tk/timtim3001/tanksclone/Game.java" />
@@ -147,16 +126,21 @@
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameLoop.java" />
         <option value="$PROJECT_DIR$/engine/pom.xml" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Component.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/window/GamePanel.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/Collider.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameObject.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/DebugDraw.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/BoxCollider.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java" />
         <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/PhysicsEngine.java" />
-        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/BodyComponent.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/DebugDraw.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Renderer.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/window/GamePanel.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/ImageElement.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/utils/ImageUtils.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Sprite.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/Collider.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/BoxCollider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/DebugComponent.java" />
         <option value="$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Main.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/BodyComponent.java" />
+        <option value="$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameObject.java" />
       </list>
     </option>
   </component>
@@ -188,8 +172,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,16 +222,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tanks-clone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tanks-clone" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,7 +232,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="physics" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tanks-clone" type="b2602c69:ProjectViewProjectNode" />
@@ -270,8 +242,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="physics" type="462c0819:PsiDirectoryNode" />
-              <item name="colliders" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tanks-clone" type="b2602c69:ProjectViewProjectNode" />
@@ -299,10 +270,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tanksclone" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tanks-clone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tanks-clone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tanks-clone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tanks-clone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,18 +304,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/game/res/images" />
-      <recent name="$PROJECT_DIR$/src/main/res" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tk.timtim3001.engine.renderer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/res/images" />
       <recent name="$PROJECT_DIR$/game/res/images" />
       <recent name="$PROJECT_DIR$/game/src/tk/timtim3001/tanksclone" />
       <recent name="$PROJECT_DIR$/game/res" />
       <recent name="$PROJECT_DIR$/game/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tk.timtim3001.engine.renderer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/game/res/images" />
+      <recent name="$PROJECT_DIR$/src/main/res" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -443,12 +432,13 @@
       <workItem from="1522417033781" duration="13663000" />
       <workItem from="1522437626492" duration="10000" />
       <workItem from="1522445900957" duration="3070000" />
-      <workItem from="1522450670632" duration="6159000" />
+      <workItem from="1522450670632" duration="6398000" />
+      <workItem from="1522580244787" duration="6520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52284000" />
+    <option name="totallyTimeSpent" value="59043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-4" width="1920" height="1021" extended-state="6" />
@@ -463,25 +453,25 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27854857" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28175026" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,20 +482,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="39" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/misc/VM.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/misc/Unsafe.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Test.java" />
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Time.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -523,21 +503,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Renderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/TerrainRenderer.java" />
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/SpriteRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/terrain/DestructableTerrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -602,9 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,16 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/DebugComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -659,9 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/ImageElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/src/tk/timtim3001/tanksclone/BattleWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -720,14 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,31 +673,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/PhysicsBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/PhysicsBody.java" />
     <entry file="file://$PROJECT_DIR$/engine/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -790,51 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/window/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/Collider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2856#2857#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/DebugDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/dyn4j/dyn4j/3.2.4/dyn4j-3.2.4.jar!/org/dyn4j/dynamics/Step.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -849,31 +719,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java">
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/DebugDraw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="105">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/Renderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/renderer/SpriteRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="62" column="88" selection-start-line="62" selection-start-column="88" selection-end-line="62" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/awt/Toolkit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="675" column="25" selection-start-line="675" selection-start-column="25" selection-end-line="675" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/window/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/PhysicsEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
+        <state relative-caret-position="285">
           <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/ui/ImageElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/utils/ImageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/Collider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/DebugComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/physics/colliders/BoxCollider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="240">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -882,37 +852,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/components/BodyComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="210">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="53">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2338#2339#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/timtim3001/tanksclone/Main.java">
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state relative-caret-position="-315">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/src/main/java/tk/timtim3001/engine/core/GameWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
         </state>
       </provider>
     </entry>

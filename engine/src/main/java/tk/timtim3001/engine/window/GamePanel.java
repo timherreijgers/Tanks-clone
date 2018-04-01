@@ -3,6 +3,7 @@ package tk.timtim3001.engine.window;
 import org.dyn4j.dynamics.World;
 import tk.timtim3001.engine.core.Engine;
 import tk.timtim3001.engine.renderer.DebugDraw;
+import tk.timtim3001.engine.renderer.Renderer;
 import tk.timtim3001.engine.renderer.SpriteRenderer;
 
 import javax.swing.JPanel;
@@ -13,20 +14,18 @@ import java.awt.Toolkit;
 
 public class GamePanel extends JPanel {
 
-    private SpriteRenderer renderer;
-
     GamePanel(int width, int height){
         setPreferredSize(new Dimension(width, height));
-        renderer = SpriteRenderer.getInstance();
+        SpriteRenderer.getInstance();
     }
 
     @Override
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
-//        renderer.render((Graphics2D) graphics);
+        Renderer.renderAll((Graphics2D) graphics);
         World world = Engine.getInstance().getPhysicsWorld();
         if(world != null)
-            DebugDraw.draw((Graphics2D) graphics, world, 1);
+            DebugDraw.draw((Graphics2D) graphics, world);
         tk.timtim3001.engine.ui.UIManager.draw((Graphics2D) graphics);
 
         Toolkit.getDefaultToolkit().sync();

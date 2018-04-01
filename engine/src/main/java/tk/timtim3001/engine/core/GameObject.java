@@ -10,17 +10,28 @@ import java.util.List;
 public class GameObject {
 
     private Point2D position;
-    private double scaleX;
-    private double scaleY;
+    private double width;
+    private double height;
     private double rotation;
+    private double scaleX = 1;
+    private double scaleY = 1;
 
     private List<Component> components;
 
     public GameObject(){
         position = new Point2D.Double(0,0);
-        scaleX = 1;
-        scaleY = 1;
+        width = 1;
+        height = 1;
         rotation = 0;
+
+        components = new ArrayList<>();
+    }
+
+    public GameObject(double x, double y, double width, double height, double rotation){
+        this.position = new Point2D.Double(x - width / 2, y - height / 2);
+        this.width = width;
+        this.height = height;
+        this.rotation = rotation;
 
         components = new ArrayList<>();
     }
@@ -28,15 +39,14 @@ public class GameObject {
     public void addComponent(Component component){
         components.add(component);
         component.setParent(this);
-        component.start();
     }
 
     public void translate(int dx, int dy){
         position.setLocation(position.getX() + dx, position.getY() + dy);
     }
 
-    public void setPosition(int x, int y){
-        setPosition(new Point2D.Double(x, y));
+    public void setPosition(float x, float y){
+        setPosition(new Point2D.Double((x - width / 2), (y - height / 2)));
     }
 
     public void setRotation(double rotation) {
@@ -47,10 +57,20 @@ public class GameObject {
         this.position = position;
     }
 
+    public void rotate(double rotation){
+        this.rotation += rotation;
+    }
+
     public AffineTransform getTransform(){
         AffineTransform transform = new AffineTransform();
         transform.translate(position.getX(), position.getY());
-        transform.scale(scaleX, scaleY);
+        transform.rotate(rotation, width / 2, height / 2);
+        return transform;
+    }
+
+    public AffineTransform getPhysicsTransform(){
+        AffineTransform transform = new AffineTransform();
+        transform.translate(position.getX() / Engine.PPM, position.getY() / Engine.PPM);
         transform.rotate(rotation);
         return transform;
     }
@@ -62,6 +82,18 @@ public class GameObject {
                 return (T) c;
         }
         return null;
+    }
+
+    public double getRotation() {
+        return rotation;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     protected void start(){
@@ -94,9 +126,5 @@ public class GameObject {
 
     protected void destroy(){
 
-    }
-
-    public double getRotation() {
-        return rotation;
     }
 }

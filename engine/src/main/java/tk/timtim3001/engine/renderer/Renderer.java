@@ -6,13 +6,13 @@ import java.util.List;
 
 public abstract class Renderer {
 
-    private List<Renderer> rendererList = new ArrayList<>();
+    private static List<Renderer> rendererList = new ArrayList<>();
 
     protected Renderer(){
         rendererList.add(this);
     }
 
-    public void renderAll(Graphics2D g){
+    public static void renderAll(Graphics2D g){
         for(Renderer renderer : rendererList)
             renderer.render(g);
     }

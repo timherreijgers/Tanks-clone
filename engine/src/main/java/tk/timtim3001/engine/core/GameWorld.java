@@ -26,11 +26,10 @@ class GameWorld {
     }
 
     void physicsUpdate(){
-        double timeElapsed = Time.deltaTime * PhysicsEngine.getSpeedMultiplier() * 100000;
-        System.out.println(timeElapsed);
+        double timeElapsed = Time.deltaTime * PhysicsEngine.getSpeedMultiplier();
         world.update(timeElapsed);
-        for(GameObject gameObject : gameObjects)
-            gameObject.fixedUpdate();
+        for(Object gameObject : gameObjects.toArray())
+            ((GameObject) gameObject).fixedUpdate();
     }
 
     void pause(){

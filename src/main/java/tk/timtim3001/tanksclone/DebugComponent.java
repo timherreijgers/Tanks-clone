@@ -5,8 +5,6 @@ import tk.timtim3001.engine.core.Engine;
 import tk.timtim3001.engine.core.Time;
 import tk.timtim3001.engine.input.Input;
 
-import java.awt.event.KeyEvent;
-
 public class DebugComponent extends Component {
 
     private Engine engine;
@@ -25,9 +23,6 @@ public class DebugComponent extends Component {
 //        totalFps += engine.getFps();
 //        counter++;
 //        System.out.println("Average fps: " + totalFps / counter);
-        if(input.isKeyDown(KeyEvent.VK_D))
-            parent.translate((int) Math.round(50 * Time.deltaTime), 0);
-        if(input.isKeyDown(KeyEvent.VK_A))
-            parent.translate((int) Math.round(-50 * Time.deltaTime), 0);
+//        parent.rotate(Math.PI * Time.deltaTime);
     }
 }

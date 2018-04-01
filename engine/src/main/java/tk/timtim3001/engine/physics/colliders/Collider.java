@@ -5,7 +5,7 @@ import org.dyn4j.dynamics.BodyFixture;
 public interface Collider {
 
     BodyFixture getBodyFixture();
-    int getWidth();
-    int getHeight();
+    float getWidth();
+    float getHeight();
 
 }

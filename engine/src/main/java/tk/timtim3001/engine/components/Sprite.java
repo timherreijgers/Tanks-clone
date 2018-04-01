@@ -1,7 +1,7 @@
 package tk.timtim3001.engine.components;
 
-import tk.timtim3001.engine.core.GameObject;
 import tk.timtim3001.engine.renderer.SpriteRenderer;
+import tk.timtim3001.engine.utils.ImageUtils;
 
 import java.awt.image.BufferedImage;
 
@@ -22,6 +22,7 @@ public class Sprite extends Component {
     @Override
     public void resume() {
         SpriteRenderer.getInstance().addSpriteToRenderer(this);
+        image = ImageUtils.resize(image, parent.getWidth(), parent.getHeight());
     }
 
     @Override

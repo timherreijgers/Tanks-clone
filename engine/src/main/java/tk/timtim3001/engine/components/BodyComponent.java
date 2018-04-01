@@ -23,8 +23,8 @@ public class BodyComponent extends Component {
     public void start() {
         body = new Body();
         body.addFixture(collider.getBodyFixture());
-        double x = parent.getTransform().getTranslateX() + collider.getWidth() / 2;
-        double y = parent.getTransform().getTranslateY() + collider.getHeight() / 2;
+        double x = parent.getPhysicsTransform().getTranslateX();
+        double y = parent.getPhysicsTransform().getTranslateY();
         body.translate(x, y);
         body.rotate(parent.getRotation());
         body.setMass(massType);
@@ -32,10 +32,10 @@ public class BodyComponent extends Component {
 
     @Override
     public void fixedUpdate() {
-        int x = (int) Math.round(body.getTransform().getTranslationX());
-        int y = (int) Math.round(body.getTransform().getTranslationY());
+        float x = (float) body.getTransform().getTranslationX();
+        float y = (float) body.getTransform().getTranslationY();
         double rotation = body.getTransform().getRotation();
-        parent.setPosition(x, y);
+        parent.setPosition(x * Engine.PPM, y * Engine.PPM);
         parent.setRotation(rotation);
     }
 
