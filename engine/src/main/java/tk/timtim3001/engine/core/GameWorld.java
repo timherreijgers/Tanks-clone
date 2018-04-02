@@ -21,8 +21,8 @@ class GameWorld {
     }
 
     void update(){
-        for(GameObject gameObject : gameObjects)
-            gameObject.update();
+        for(Object gameObject : gameObjects.toArray())
+            ((GameObject) gameObject).update();
     }
 
     void physicsUpdate(){

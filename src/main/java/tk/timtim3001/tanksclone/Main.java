@@ -27,21 +27,6 @@ public class Main {
         BodyComponent component1 = new BodyComponent(new BoxCollider(1000, 10), MassType.INFINITE);
         floor.addComponent(component1);
 
-//        GameObject block = new GameObject();
-//        block.translate(500, 0);
-//        BodyComponent component2 = new BodyComponent(new BoxCollider(10, 10), MassType.NORMAL);
-//        block.addComponent(component2);
-
-//        GameObject test = new GameObject(100, 100, 640, 640, 0);
-//        try {
-//            test.addComponent(new Sprite(1, ImageIO.read(getClass().getResource("/images/test.png"))));
-//            test.addComponent(new DebugComponent());
-////            test.addComponent(new BodyComponent(new BoxCollider(64,64), MassType.NORMAL));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        engine.addGameObject(test);
-
         GameObject test2 = new GameObject(100, 100, 64, 64, 0);
         try {
             test2.addComponent(new Sprite(2, ImageIO.read(getClass().getResource("/images/test.png"))));
@@ -52,10 +37,19 @@ public class Main {
         }
         engine.addGameObject(test2);
 
+
+        GameObject mario = new GameObject(100, 100, 64, 200, 0);
+        try {
+            mario.addComponent(new Sprite(2, ImageIO.read(getClass().getResource("/images/mario.png"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 //        test.setPosition(200, 300);
         test2.setPosition(200, 300);
 
         engine.addGameObject(floor);
+        engine.addGameObject(mario);
 //        engine.addGameObject(block);
     }
 }

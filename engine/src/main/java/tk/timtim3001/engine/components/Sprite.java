@@ -22,7 +22,7 @@ public class Sprite extends Component {
     @Override
     public void resume() {
         SpriteRenderer.getInstance().addSpriteToRenderer(this);
-        image = ImageUtils.resize(image, parent.getWidth(), parent.getHeight());
+        image = ImageUtils.resize(getImage(), parent.getWidth(), parent.getHeight());
     }
 
     @Override

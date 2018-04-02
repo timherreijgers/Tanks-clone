@@ -1,5 +1,8 @@
 package tk.timtim3001.engine.terrain;
 
+import tk.timtim3001.engine.physics.colliders.BoxCollider;
+import tk.timtim3001.engine.physics.colliders.Collider;
+
 import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.image.BufferedImage;
@@ -24,5 +27,9 @@ public class Terrain {
 
     public BufferedImage getImage(){
         return image;
+    }
+
+    public Collider getCollider(){
+        return new BoxCollider(terrainArea.getBounds().getWidth(), terrainArea.getBounds().getHeight());
     }
 }
