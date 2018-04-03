@@ -29,6 +29,10 @@ public class Terrain {
         return image;
     }
 
+    public Area getTerrainArea() {
+        return terrainArea;
+    }
+
     public Collider getCollider(){
         return new BoxCollider(terrainArea.getBounds().getWidth(), terrainArea.getBounds().getHeight());
     }

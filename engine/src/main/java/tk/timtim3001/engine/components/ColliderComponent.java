@@ -3,6 +3,7 @@ package tk.timtim3001.engine.components;
 import tk.timtim3001.engine.physics.colliders.BoxCollider;
 import tk.timtim3001.engine.physics.colliders.Collider;
 import tk.timtim3001.engine.physics.colliders.TerrainCollider;
+import tk.timtim3001.engine.renderer.TerrainRenderer;
 
 import java.awt.geom.PathIterator;
 
@@ -30,7 +31,6 @@ public class ColliderComponent extends Component {
     public Collider getCollider(){
         return collider;
     }
-
 
     public enum ColliderType{
         BOX, TERRAIN

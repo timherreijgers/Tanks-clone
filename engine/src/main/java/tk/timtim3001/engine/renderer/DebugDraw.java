@@ -10,6 +10,7 @@ import org.dyn4j.geometry.Rectangle;
 import org.dyn4j.geometry.Vector2;
 import tk.timtim3001.engine.core.Engine;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Shape;
 import java.awt.geom.AffineTransform;
@@ -28,10 +29,13 @@ public class DebugDraw {
             bodyTransform.rotate(b.getTransform().getRotation());
             g2d.transform(bodyTransform);
 
+            Color oldColor = g2d.getColor();
+            g2d.setColor(Color.RED);
 
             for(Fixture f : b.getFixtures())
                 g2d.draw(AffineTransform.getScaleInstance(Engine.PPM, Engine.PPM).createTransformedShape(getShape(f.getShape())));
 
+            g2d.setColor(oldColor);
 
             g2d.setTransform(originalTransform);
         }

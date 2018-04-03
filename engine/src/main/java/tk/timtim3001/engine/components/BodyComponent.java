@@ -1,13 +1,17 @@
 package tk.timtim3001.engine.components;
 
 import com.sun.org.apache.bcel.internal.generic.SWITCH;
+import org.dyn4j.collision.Fixture;
 import org.dyn4j.dynamics.Body;
+import org.dyn4j.dynamics.BodyFixture;
 import org.dyn4j.dynamics.Force;
 import org.dyn4j.geometry.MassType;
 import org.dyn4j.geometry.Vector2;
 import tk.timtim3001.engine.core.Engine;
 import tk.timtim3001.engine.exceptions.MissingComponentException;
 import tk.timtim3001.engine.physics.colliders.Collider;
+
+import java.awt.geom.Point2D;
 
 public class BodyComponent extends Component {
 
@@ -52,23 +56,37 @@ public class BodyComponent extends Component {
 
     @Override
     public void fixedUpdate() {
-        float x = (float) body.getTransform().getTranslationX();
-        float y = (float) body.getTransform().getTranslationY();
-        double rotation = body.getTransform().getRotation();
-        parent.setPosition(x * Engine.PPM, y * Engine.PPM);
-        parent.setRotation(rotation);
+        if(body != null) {
+            float x = (float) body.getTransform().getTranslationX();
+            float y = (float) body.getTransform().getTranslationY();
+            double rotation = body.getTransform().getRotation();
+            parent.setPosition(x * Engine.PPM, y * Engine.PPM);
+            parent.setRotation(rotation);
+        }
     }
 
-    public void addForce(Vector2 force){
+    public void setRestitution(double restitution){
+        for(BodyFixture bodyFixture : body.getFixtures())
+            bodyFixture.setRestitution(restitution);
+    }
+
+    public void setFriction(double friction){
+        for(BodyFixture bodyFixture : body.getFixtures())
+            bodyFixture.setFriction(friction);
+    }
+
+    public void addForce(Point2D force){
+        addForce(new Vector2(force.getX(), force.getY()));
+    }
+
+    private void addForce(Vector2 force){
         body.applyForce(force);
     }
 
-    public void addForce(Vector2 force, Vector2 point){
-        body.applyForce(force, point);
-    }
-
-    public void addForce(Force force){
-        body.applyForce(force);
+    public void setForce(Point2D force){
+        Vector2 currentForce = body.getForce();
+        Vector2 newForce = new Vector2(force.getX() - currentForce.x, force.getY() - currentForce.y);
+        body.applyForce(newForce);
     }
 
     @Override

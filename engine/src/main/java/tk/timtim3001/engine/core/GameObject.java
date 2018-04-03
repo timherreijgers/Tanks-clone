@@ -70,7 +70,7 @@ public class GameObject {
 
     public AffineTransform getPhysicsTransform(){
         AffineTransform transform = new AffineTransform();
-        transform.translate(position.getX() / Engine.PPM, position.getY() / Engine.PPM);
+        transform.translate((position.getX() + width / 2) / Engine.PPM, (position.getY() + height / 2) / Engine.PPM);
         transform.rotate(rotation);
         return transform;
     }
@@ -86,6 +86,10 @@ public class GameObject {
 
     public double getRotation() {
         return rotation;
+    }
+
+    public Point2D getPosition() {
+        return position;
     }
 
     public double getWidth() {

@@ -1,11 +1,12 @@
-package tk.timtim3001.tanksclone;
+package tk.timtim3001.tanksclone.interfaces;
 
-import tk.timtim3001.engine.ui.Button;
+import tk.timtim3001.engine.ui.ButtonElement;
 import tk.timtim3001.engine.ui.ImageElement;
 import tk.timtim3001.engine.ui.UICanvas;
 import tk.timtim3001.engine.ui.UIManager;
 import tk.timtim3001.engine.window.Window;
 import tk.timtim3001.engine.window.WindowManager;
+import tk.timtim3001.tanksclone.worlds.BattleWorld;
 
 import javax.imageio.ImageIO;
 import java.io.IOException;
@@ -22,16 +23,16 @@ public class MainMenu {
 
         UICanvas uiCanvas = new UICanvas(0, 0, width, height);
 
-        Button startButton = new Button(0,height / 3,"Start game");
-        Button stopButton = new Button(0,height / 3 * 2,"Exit");
-        startButton.setPosition(width / 2 - startButton.getWidth() / 2, height / 3);
-        stopButton.setPosition(width / 2 - stopButton.getWidth() / 2, height / 3 + startButton.getHeight() * 3);
+        ButtonElement startButtonElement = new ButtonElement(0,height / 3,"Start game");
+        ButtonElement stopButtonElement = new ButtonElement(0,height / 3 * 2,"Exit");
+        startButtonElement.setPosition(width / 2 - startButtonElement.getWidth() / 2, height / 3);
+        stopButtonElement.setPosition(width / 2 - stopButtonElement.getWidth() / 2, height / 3 + startButtonElement.getHeight() * 3);
 
-        startButton.addOnClickListener(()->{
+        startButtonElement.addOnClickListener(()->{
             new BattleWorld();
             UIManager.stopDisplayingCanvas(UI_NAME);
         });
-        stopButton.addOnClickListener(()->System.exit(0));
+        stopButtonElement.addOnClickListener(()->System.exit(0));
         
         try {
             ImageElement imageElement = new ImageElement(0, 0, width, height,
@@ -41,8 +42,8 @@ public class MainMenu {
             e.printStackTrace();
         }
 
-        uiCanvas.addElement(startButton);
-        uiCanvas.addElement(stopButton);
+        uiCanvas.addElement(startButtonElement);
+        uiCanvas.addElement(stopButtonElement);
 
         UIManager.registerCanvas(UI_NAME, uiCanvas);
         UIManager.displayCanvas(UI_NAME);

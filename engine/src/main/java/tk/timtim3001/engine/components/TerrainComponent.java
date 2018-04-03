@@ -1,5 +1,6 @@
 package tk.timtim3001.engine.components;
 
+import tk.timtim3001.engine.renderer.TerrainRenderer;
 import tk.timtim3001.engine.terrain.Terrain;
 import tk.timtim3001.engine.terrain.TerrainGenerator;
 
@@ -24,6 +25,12 @@ public class TerrainComponent extends Component {
                 this.terrain = TerrainGenerator.generateDestructableTerrain((int) parent.getWidth(), (int) parent.getHeight());
                 break;
         }
+        TerrainRenderer.getInstance().addTerrain(this);
+    }
+
+    @Override
+    public void pause() {
+        TerrainRenderer.getInstance().removeTerrain(this);
     }
 
     public Terrain getTerrain() {

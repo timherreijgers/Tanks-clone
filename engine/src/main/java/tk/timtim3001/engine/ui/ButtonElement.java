@@ -16,24 +16,10 @@ import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
 import java.awt.geom.Rectangle2D;
 
-public class Button extends UIElement {
+public class ButtonElement extends TextElement {
 
-    private String text;
-
-    public Button(int x, int y, String text) {
-        super(x, y, 0, 0);
-        calculateBoundries(text);
-        this.text = text;
-    }
-
-    private void calculateBoundries(String text){
-        Window window = WindowManager.getInstance().getWindow();
-        Graphics2D g = window.getCorrectGraphics();
-        FontRenderContext fontRenderContext = g.getFontRenderContext();
-        GlyphVector gv = g.getFont().createGlyphVector(fontRenderContext, text);
-        Shape outline = gv.getOutline();
-        width = (int) outline.getBounds().getWidth() + 10;
-        height = (int) outline.getBounds().getHeight() + 6;
+    public ButtonElement(int x, int y, String text) {
+        super(x, y, text);
     }
 
     @Override
@@ -44,8 +30,8 @@ public class Button extends UIElement {
         g.fill(new Rectangle2D.Double(x, y, width, height));
         g.setColor(Color.BLACK);
         g.draw(new Rectangle2D.Double(x, y, width, height));
-        g.drawString(text, x + 5, y + height - 4);
 
         g.setColor(oldColor);
+        super.draw(g);
     }
 }
