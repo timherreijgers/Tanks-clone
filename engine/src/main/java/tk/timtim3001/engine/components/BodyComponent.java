@@ -38,20 +38,24 @@ public class BodyComponent extends Component {
     }
 
     @Override
-    public void start() {
+    public void resume() {
         ColliderComponent colliderComponent = parent.getComponent(ColliderComponent.class);
-        if(colliderComponent == null)
+        if (colliderComponent == null)
             throw new MissingComponentException("BodyComponent needs a ColliderComponent to be attached to the GameObject");
 
         this.collider = colliderComponent.getCollider();
 
         body = new Body();
+        System.out.println(collider.getBodyFixture());
         body.addFixture(collider.getBodyFixture());
         double x = parent.getPhysicsTransform().getTranslateX();
         double y = parent.getPhysicsTransform().getTranslateY();
         body.translate(x, y);
         body.rotate(parent.getRotation());
         body.setMass(massType);
+
+        engine = Engine.getInstance();
+        engine.addPhysicsObject(body);
     }
 
     @Override
@@ -87,12 +91,6 @@ public class BodyComponent extends Component {
         Vector2 currentForce = body.getForce();
         Vector2 newForce = new Vector2(force.getX() - currentForce.x, force.getY() - currentForce.y);
         body.applyForce(newForce);
-    }
-
-    @Override
-    public void resume() {
-        engine = Engine.getInstance();
-        engine.addPhysicsObject(body);
     }
 
     @Override

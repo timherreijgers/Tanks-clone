@@ -112,8 +112,12 @@ public class GameObject {
     }
 
     protected void update(){
-        for(Component component : components){
-            component.update();
+        try {
+            for (Component component : components) {
+                component.update();
+            }
+        }catch (Exception e){
+            System.out.println("NULLPOINTER!");
         }
     }
 

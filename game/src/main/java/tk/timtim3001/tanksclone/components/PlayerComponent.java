@@ -5,6 +5,7 @@ import tk.timtim3001.engine.components.Component;
 import tk.timtim3001.engine.core.Engine;
 import tk.timtim3001.engine.input.Input;
 import tk.timtim3001.tanksclone.entities.Barrel;
+import tk.timtim3001.tanksclone.entities.Bullet;
 import tk.timtim3001.tanksclone.interfaces.GameUI;
 
 import java.awt.event.KeyEvent;
@@ -19,8 +20,10 @@ public class PlayerComponent extends Component {
     private Barrel barrel;
     private double barrelTilt = -90;
 
+    private Bullet bullet;
+
     @Override
-    public void start() {
+    public void resume() {
         bodyComponent = parent.getComponent(BodyComponent.class);
         bodyComponent.setRestitution(0.0);
         bodyComponent.setFriction(2);
@@ -32,6 +35,8 @@ public class PlayerComponent extends Component {
                 parent.getPosition().getY() + (Math.cos(Math.toRadians(barrelTilt)) * 16f),
                 16, 8, 0);
         Engine.getInstance().addGameObject(barrel);
+
+        bullet = new Bullet();
     }
 
     @Override
@@ -50,30 +55,36 @@ public class PlayerComponent extends Component {
 
         barrel.setPosition((float) (parent.getPosition().getX() + parent.getWidth() / 2
                         + (Math.cos(Math.toRadians(barrelTilt)) * 16f)),
-                (float) (parent.getPosition().getY()));
+                (float) (parent.getPosition().getY() + (Math.sin(Math.toRadians(barrelTilt)) * 4f)));
 
-        System.out.println("Xpos parent: " + parent.getPosition().getX() + parent.getWidth() / 2 +
-                ", xPos barrel: "+ (parent.getPosition().getX() + parent.getWidth() / 2
-                + (Math.cos(Math.toRadians(barrelTilt)) * 16f)));
         barrel.setRotation(Math.toRadians(barrelTilt));
     }
 
     @Override
     public void fixedUpdate() {
-        if(Input.getInstance().isKeyDown(KeyEvent.VK_A) && fuelLevel > 0) {
-            bodyComponent.setFriction(2);
-            bodyComponent.setForce(new Point2D.Double(-1, 0));
-            fuelLevel -= 1f;
-        } else if (Input.getInstance().isKeyDown(KeyEvent.VK_D) && fuelLevel > 0) {
-            bodyComponent.setFriction(2);
-            bodyComponent.setForce(new Point2D.Double(1, 0));
-            fuelLevel -= 1f;
-        }else{
-            bodyComponent.setFriction(1000);
+        if(bodyComponent != null) {
+            if (Input.getInstance().isKeyDown(KeyEvent.VK_A) && fuelLevel > 0) {
+                bodyComponent.setFriction(2);
+                bodyComponent.setForce(new Point2D.Double(-1, 0));
+                fuelLevel -= 1f;
+            } else if (Input.getInstance().isKeyDown(KeyEvent.VK_D) && fuelLevel > 0) {
+                bodyComponent.setFriction(2);
+                bodyComponent.setForce(new Point2D.Double(1, 0));
+                fuelLevel -= 1f;
+            } else {
+                bodyComponent.setFriction(1000);
+            }
         }
     }
 
     private void fire(){
-        System.out.println("Fire has to be done here!");
+        float x = (float) (parent.getPosition().getX() + parent.getWidth() / 2
+                + (Math.cos(Math.toRadians(barrelTilt)) * 16f));
+        float y = (float) (parent.getPosition().getY() + (Math.sin(Math.toRadians(barrelTilt)) * 16f));
+
+        float xVelocity = (float) Math.cos(Math.toRadians(barrelTilt)) * (powerLevel / 18);
+        float yVelocity = (float) Math.sin(Math.toRadians(barrelTilt)) * (powerLevel / 35);
+        bullet.addBullet(x, y);
+        bullet.getComponent(BodyComponent.class).addForce(new Point2D.Double(xVelocity, yVelocity));
     }
 }
