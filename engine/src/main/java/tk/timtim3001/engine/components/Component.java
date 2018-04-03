@@ -22,6 +22,10 @@ public class Component {
 
     public void destroy(){}
 
+    public void onCollision(){
+
+    }
+
     public GameObject getParent() {
         return parent;
     }

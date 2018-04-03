@@ -15,6 +15,7 @@ public class GameObject {
     private double rotation;
     private double scaleX = 1;
     private double scaleY = 1;
+    private boolean hasCollided;
 
     private List<Component> components;
 
@@ -61,6 +62,10 @@ public class GameObject {
         this.rotation += rotation;
     }
 
+    public void setHasCollided(boolean hasCollided){
+        this.hasCollided = hasCollided;
+    }
+
     public AffineTransform getTransform(){
         AffineTransform transform = new AffineTransform();
         transform.translate(position.getX(), position.getY());
@@ -101,7 +106,7 @@ public class GameObject {
     }
 
     protected void start(){
-        for(Component component : components){
+        for (Component component : components) {
             component.start();
         }
     }
@@ -112,6 +117,9 @@ public class GameObject {
     }
 
     protected void update(){
+        if(hasCollided)
+            onCollision();
+
         try {
             for (Component component : components) {
                 component.update();
@@ -130,6 +138,11 @@ public class GameObject {
     protected void pause(){
         for(Component component : components)
             component.pause();
+    }
+
+    protected void onCollision(){
+        for(Component component : components)
+            component.onCollision();
     }
 
     protected void destroy(){
