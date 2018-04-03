@@ -3,6 +3,7 @@ package tk.timtim3001.tanksclone.components;
 import tk.timtim3001.engine.components.BodyComponent;
 import tk.timtim3001.engine.components.Component;
 import tk.timtim3001.engine.core.Engine;
+import tk.timtim3001.engine.core.GameObject;
 import tk.timtim3001.engine.input.Input;
 import tk.timtim3001.tanksclone.entities.Barrel;
 import tk.timtim3001.tanksclone.entities.Bullet;
@@ -20,8 +21,6 @@ public class PlayerComponent extends Component {
     private Barrel barrel;
     private double barrelTilt = -90;
 
-    private Bullet bullet;
-
     @Override
     public void resume() {
         bodyComponent = parent.getComponent(BodyComponent.class);
@@ -35,8 +34,6 @@ public class PlayerComponent extends Component {
                 parent.getPosition().getY() + (Math.cos(Math.toRadians(barrelTilt)) * 16f),
                 16, 8, 0);
         Engine.getInstance().addGameObject(barrel);
-
-        bullet = new Bullet();
     }
 
     @Override
@@ -78,12 +75,15 @@ public class PlayerComponent extends Component {
     }
 
     private void fire(){
+        Bullet bullet = new Bullet();
+
         float x = (float) (parent.getPosition().getX() + parent.getWidth() / 2
                 + (Math.cos(Math.toRadians(barrelTilt)) * 16f));
         float y = (float) (parent.getPosition().getY() + (Math.sin(Math.toRadians(barrelTilt)) * 16f));
 
         float xVelocity = (float) Math.cos(Math.toRadians(barrelTilt)) * (powerLevel / 18);
         float yVelocity = (float) Math.sin(Math.toRadians(barrelTilt)) * (powerLevel / 35);
+
         bullet.addBullet(x, y);
         bullet.getComponent(BodyComponent.class).addForce(new Point2D.Double(xVelocity, yVelocity));
     }

@@ -30,6 +30,11 @@ public class Sprite extends Component {
         SpriteRenderer.getInstance().removeSpriteFromRenderer(this);
     }
 
+    @Override
+    public void destroy() {
+        SpriteRenderer.getInstance().removeSpriteFromRenderer(this);
+    }
+
     public int getLayer() {
         return layer;
     }

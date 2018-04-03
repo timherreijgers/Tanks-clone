@@ -55,7 +55,7 @@ public class BodyComponent extends Component {
         body.setMass(massType);
 
         engine = Engine.getInstance();
-        engine.addPhysicsObject(body);
+        engine.addPhysicsObject(body, parent);
     }
 
     @Override
@@ -95,6 +95,11 @@ public class BodyComponent extends Component {
 
     @Override
     public void pause() {
+        engine.removePhysicsObject(body);
+    }
+
+    @Override
+    public void destroy() {
         engine.removePhysicsObject(body);
     }
 

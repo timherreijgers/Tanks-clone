@@ -15,5 +15,7 @@ public class Terrain extends GameObject {
         addComponent( new TerrainComponent(TerrainComponent.TerrainType.DESTRUCTABLE));
         addComponent(new ColliderComponent(ColliderComponent.ColliderType.TERRAIN));
         addComponent(new BodyComponent(MASS_TYPE_INFINITE));
+
+        setTag("Terrain");
     }
 }

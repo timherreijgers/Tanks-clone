@@ -20,6 +20,8 @@ public class Player extends GameObject {
             addComponent(new ColliderComponent(ColliderComponent.ColliderType.BOX));
             addComponent(new BodyComponent(MASS_TYPE_FIXED_ANGULAR_VELOCITY));
             addComponent(new PlayerComponent());
+
+            setTag("Player");
         } catch (IOException e) {
             e.printStackTrace();
         }

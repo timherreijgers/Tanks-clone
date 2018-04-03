@@ -71,12 +71,12 @@ public class Engine {
         activeWorld.removeGameObject(object);
     }
 
-    public void addPhysicsObject(Body body){
+    public void addPhysicsObject(Body body, GameObject parent){
         if(activeWorld == null) {
             throw new WorldNotInitializedException("You have to initialize the world using setGameWorld.");
         }
 
-        activeWorld.addPhysicsBody(body);
+        activeWorld.addPhysicsBody(body, parent);
     }
 
     public void removePhysicsObject(Body body){

@@ -22,7 +22,7 @@ public class Component {
 
     public void destroy(){}
 
-    public void onCollision(){
+    public void onCollision(GameObject other){
 
     }
 
