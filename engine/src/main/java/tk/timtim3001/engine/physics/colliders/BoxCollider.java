@@ -1,9 +1,13 @@
 package tk.timtim3001.engine.physics.colliders;
 
 import org.dyn4j.dynamics.BodyFixture;
+import org.dyn4j.geometry.Convex;
 import org.dyn4j.geometry.Geometry;
 import org.dyn4j.geometry.Polygon;
 import tk.timtim3001.engine.core.Engine;
+
+import java.awt.geom.Area;
+import java.awt.geom.PathIterator;
 
 public class BoxCollider implements Collider{
 

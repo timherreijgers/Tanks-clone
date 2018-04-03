@@ -39,5 +39,6 @@ public class TerrainRenderer extends Renderer {
             graphics2D.setTransform(terrain.getParent().getTransform());
             graphics2D.fill(terrain.getTerrain().getTerrainArea());
         }
+        graphics2D.dispose();
     }
 }
